@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+  <g id="Component_84_2" data-name="Component 84 – 2" transform="translate(0.5 0.5)">
+    <path id="Path_3859" data-name="Path 3859" d="M6,0H48" transform="translate(-6)" fill="none" stroke="#2b2b2e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_3860" data-name="Path 3860" d="M6,0H48" transform="translate(42 -6) rotate(90)" fill="none" stroke="#2b2b2e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_3861" data-name="Path 3861" d="M6,0H48" transform="translate(0 -6) rotate(90)" fill="none" stroke="#2b2b2e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_3862" data-name="Path 3862" d="M6,0H48" transform="translate(-6 42)" fill="none" stroke="#2b2b2e" stroke-linecap="round" stroke-width="1"/>
+    <g id="Group_653" data-name="Group 653" transform="translate(-2820.894 1016.323)">
+      <path id="check" d="M-19358.785-17028.6l8.213,9.93,15.2-19.736" transform="translate(22189.895 16032.678)" fill="none" stroke="#1922fb" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
