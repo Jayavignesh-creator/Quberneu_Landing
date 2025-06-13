@@ -10,7 +10,7 @@ const Testimonials = () => {
     },
     {
       number: "500+",
-      label: "Projects Completed",
+      label: "Projects Completed", 
       description: "Across various industries"
     },
     {
@@ -26,26 +26,20 @@ const Testimonials = () => {
   ]
 
   return (
-    <div id="about" className="py-32 bg-white relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 text-6xl text-gray-400">"</div>
-        <div className="absolute bottom-20 right-10 text-6xl text-gray-400 rotate-180">"</div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div id="about" className="section bg-secondary">
+      <div className="main-container">
         {/* About Content */}
         <motion.div
-          className="text-center mb-20"
+          className="section-header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="section-title">
             About Codec
           </h2>
-          <p className="text-gray-600 text-xl max-w-4xl mx-auto leading-relaxed">
+          <p className="section-subtitle text-secondary">
             As a Microsoft-certified IT managed services provider, Codec offers best-in-class people and processes 
             to lead successful digital transformation projects. We combine proven technologies with a personalised 
             approach to fully support your organisation's success.
@@ -53,22 +47,33 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="cards-wrap" style={{ marginBottom: '4rem' }}>
           {aboutStats.map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center"
+              className="cards-item"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: false }}
-              whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
+              style={{ 
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '200px',
+                padding: '2rem'
               }}
             >
               <motion.div
-                className="text-5xl font-bold text-blue-600 mb-2"
+                className="text-primary"
+                style={{ 
+                  fontSize: 'clamp(32px, 4vw, 48px)',
+                  fontFamily: 'TomatoGrotesk-Medium, sans-serif',
+                  fontWeight: '500',
+                  marginBottom: '1rem'
+                }}
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
@@ -78,7 +83,12 @@ const Testimonials = () => {
               </motion.div>
               
               <motion.h3
-                className="text-xl font-semibold text-gray-900 mb-2"
+                style={{ 
+                  fontSize: '20px',
+                  fontFamily: 'TomatoGrotesk-Medium, sans-serif',
+                  color: '#2b2b2e',
+                  marginBottom: '0.5rem'
+                }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
@@ -88,7 +98,8 @@ const Testimonials = () => {
               </motion.h3>
               
               <motion.p
-                className="text-gray-600"
+                className="text-secondary"
+                style={{ fontSize: '16px', textAlign: 'center' }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
@@ -102,14 +113,34 @@ const Testimonials = () => {
 
         {/* Mission Statement */}
         <motion.div
-          className="text-center bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12"
+          style={{
+            textAlign: 'center',
+            backgroundColor: '#eeede9',
+            borderRadius: '0',
+            padding: '3rem 2rem',
+            border: '3px solid #1922fb',
+            marginTop: '2rem'
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <h3 className="text-primary" style={{ 
+            fontSize: 'clamp(24px, 2.5vw, 32px)',
+            fontFamily: 'TomatoGrotesk-Medium, sans-serif',
+            marginBottom: '1.5rem'
+          }}>
+            Our Mission
+          </h3>
+          <p style={{ 
+            fontSize: '18px',
+            color: '#2b2b2e',
+            maxWidth: '800px',
+            margin: '0 auto',
+            lineHeight: '1.6',
+            fontFamily: 'FedraSansStd, sans-serif'
+          }}>
             To be the most trusted Microsoft partner, delivering innovative IT solutions that transform how 
             organisations work, enabling them to achieve more while reducing risk and maximizing value from 
             their technology investments.

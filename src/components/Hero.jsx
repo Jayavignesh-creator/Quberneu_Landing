@@ -43,6 +43,10 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
+          <motion.div className="ms-partner-badge" variants={itemVariants}>
+            Microsoft Certified Partner
+          </motion.div>
+          
           <motion.h1
             className="hero-title"
             variants={itemVariants}
@@ -91,6 +95,18 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      {/* Scroll indicator */}
+      <motion.div 
+        className="scroll-indicator"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 0.5 }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#1922fb">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </motion.div>
     </div>
   )
 }

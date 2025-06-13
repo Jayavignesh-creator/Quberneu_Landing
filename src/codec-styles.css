@@ -374,6 +374,16 @@ p {
   .cards-item {
     max-width: 100%;
     min-height: 225px;
+    width: 48%;
+    margin-right: 4%;
+  }
+  
+  .cards-item:nth-child(2n+2) {
+    margin-right: 0;
+  }
+  
+  .cards-wrap {
+    column-gap: 0;
   }
   
   .cards-item-title {
@@ -384,8 +394,23 @@ p {
     font-size: 14px;
   }
   
+  .cards-item-link a {
+    padding: 40px 0.9rem 4.6rem;
+  }
+  
   .nav-menu {
     display: none; /* Will be replaced with mobile menu */
+  }
+  
+  .section-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
@@ -396,6 +421,87 @@ p {
   
   .hero-content {
     padding: 0 5%;
+  }
+  
+  .cards-item {
+    width: 100%;
+    margin: 0 auto 2rem;
+  }
+  
+  .cards-item:nth-child(2n+2) {
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Enhanced animations and interactions */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Microsoft Partner styling */
+.ms-partner-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1922fb 0%, #0f1ae6 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.ms-partner-badge:before {
+  content: "🏆";
+  margin-right: 8px;
+}
+
+/* Scroll indicators */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
   }
 }
 
