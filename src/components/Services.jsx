@@ -1,0 +1,101 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const Services = () => {
+  const services = [
+    {
+      title: "Web Development",
+      description: "Custom web applications built with modern technologies and best practices",
+      icon: "🚀",
+      color: "from-blue-500 to-purple-600"
+    },
+    {
+      title: "UI/UX Design",
+      description: "Beautiful, intuitive designs that provide exceptional user experiences",
+      icon: "🎨",
+      color: "from-pink-500 to-rose-600"
+    },
+    {
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications for iOS and Android",
+      icon: "📱",
+      color: "from-green-500 to-teal-600"
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and deployment solutions for modern applications",
+      icon: "☁️",
+      color: "from-purple-500 to-indigo-600"
+    }
+  ]
+
+  return (
+    <div id="services" className="py-32 bg-gray-900 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Services
+          </h2>
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+            We deliver cutting-edge solutions that drive your business forward
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="group cursor-pointer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full hover:bg-white/20 transition-all duration-300 border border-white/10">
+                <motion.div
+                  className="text-4xl mb-6"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  {service.icon}
+                </motion.div>
+                
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-300 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <motion.div
+                  className={`mt-6 h-1 bg-gradient-to-r ${service.color} rounded-full`}
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
+                  viewport={{ once: true }}
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Services
