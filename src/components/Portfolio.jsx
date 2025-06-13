@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       title: "Healthcare Dashboard",
       description: "Analytics dashboard for healthcare providers with patient insights",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=600&h=400&fit=crop",
       tech: ["Vue.js", "Python", "PostgreSQL"],
       color: "from-green-500 to-teal-600"
     },
@@ -34,7 +34,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Work
@@ -52,7 +52,7 @@ const Portfolio = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               whileHover={{ y: -10 }}
             >
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
@@ -60,13 +60,15 @@ const Portfolio = () => {
                   className="relative overflow-hidden h-64"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: false }}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-80 transition-opacity duration-300`} />
                   <motion.div
                     className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ scale: 0 }}
@@ -78,13 +80,26 @@ const Portfolio = () => {
                 </motion.div>
                 
                 <div className="p-8">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <motion.h3 
+                    className="text-2xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: false }}
+                    whileHover={{ scale: 1.02 }}
+                  >
                     {project.title}
-                  </h3>
+                  </motion.h3>
                   
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <motion.p 
+                    className="text-gray-600 mb-6 leading-relaxed"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
+                    viewport={{ once: false }}
+                  >
                     {project.description}
-                  </p>
+                  </motion.p>
                   
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
@@ -94,7 +109,7 @@ const Portfolio = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.2 + techIndex * 0.1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         whileHover={{ scale: 1.1 }}
                       >
                         {tech}

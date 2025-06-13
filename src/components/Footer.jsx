@@ -44,7 +44,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <motion.h3
             className="text-3xl font-bold mb-4"
@@ -59,7 +59,7 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             Built with ❤️ using React + Vite + Tailwind CSS + Framer Motion
           </motion.p>
@@ -69,7 +69,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             {socialLinks.map((link, index) => (
               <motion.a
@@ -81,7 +81,7 @@ const Footer = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <span className="text-lg">{link.icon}</span>
                 <span className="group-hover:underline">{link.name}</span>
@@ -94,7 +94,7 @@ const Footer = () => {
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <p className="text-gray-500 text-sm">
               © 2024 Quberneu. All rights reserved.
