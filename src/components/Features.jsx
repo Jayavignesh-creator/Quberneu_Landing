@@ -6,31 +6,31 @@ const Features = () => {
     {
       icon: (
         <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
       ),
-      title: "Lightning Fast",
-      description: "Built with Vite for incredibly fast development and optimized builds",
+      title: "We do the right things",
+      description: "Our experts are invested in your organisation's success. We combine proven technologies and processes with a personalised approach to fully support your digital transformation projects.",
       bgColor: "bg-blue-100"
     },
     {
       icon: (
         <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
         </svg>
       ),
-      title: "Beautiful Design",
-      description: "Styled with Tailwind CSS for modern, responsive design",
+      title: "We sort the delivery",
+      description: "We customise our approach to your specific needs, with a focus on getting the fundamentals right. Through constant innovation of delivery methods, we're always improving our standard of service.",
       bgColor: "bg-green-100"
     },
     {
       icon: (
         <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
         </svg>
       ),
-      title: "Developer Friendly",
-      description: "Clean React component structure with modern JavaScript and best practices",
+      title: "Microsoft-Certified Delivery",
+      description: "We're one of the most awarded and certified specialist Microsoft Partners in Europe, delivering best-in-class people and processes for successful digital transformation projects.",
       bgColor: "bg-purple-100"
     }
   ]
@@ -62,7 +62,7 @@ const Features = () => {
   }
 
   return (
-    <div id="features" className="py-32 bg-gradient-to-b from-white to-gray-50">
+    <div id="solutions" className="py-32 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-20"
@@ -72,10 +72,10 @@ const Features = () => {
           viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Powerful Features
+            Our Delivery Difference
           </h2>
           <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-            Everything you need to build modern web applications with cutting-edge technology
+            Microsoft-certified IT managed services provider delivering best-in-class solutions for digital transformation
           </p>
         </motion.div>
         

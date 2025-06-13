@@ -15,10 +15,10 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Features', href: '#features' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Solutions', href: '#solutions' },
+    { name: 'Technologies', href: '#technologies' },
+    { name: 'Industries', href: '#industries' },
+    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ]
 
@@ -58,7 +58,7 @@ const Navigation = () => {
             }`}
             onClick={(e) => handleNavClick(e, '#home')}
             >
-              Quberneu
+              Codec
             </h1>
           </motion.div>
           

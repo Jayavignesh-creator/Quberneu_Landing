@@ -4,33 +4,33 @@ import { motion } from 'framer-motion'
 const Services = () => {
   const services = [
     {
-      title: "Web Development",
-      description: "Custom web applications built with modern technologies and best practices",
-      icon: "🚀",
+      title: "Cloud Infrastructure",
+      description: "Scalable Azure cloud solutions with secure, reliable infrastructure for digital transformation",
+      icon: "☁️",
       color: "from-blue-500 to-purple-600"
     },
     {
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that provide exceptional user experiences",
-      icon: "🎨",
-      color: "from-pink-500 to-rose-600"
-    },
-    {
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      icon: "📱",
+      title: "Data & AI Solutions",
+      description: "Microsoft Fabric and Azure AI services to unlock insights and drive intelligent decision-making",
+      icon: "🧠",
       color: "from-green-500 to-teal-600"
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and deployment solutions for modern applications",
-      icon: "☁️",
+      title: "Microsoft 365 & Dynamics",
+      description: "Complete Microsoft ecosystem implementation including Dynamics 365 and Power Platform",
+      icon: "💼",
       color: "from-purple-500 to-indigo-600"
+    },
+    {
+      title: "Digital Security",
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
+      icon: "🔒",
+      color: "from-red-500 to-pink-600"
     }
   ]
 
   return (
-    <div id="services" className="py-32 bg-gray-900 relative overflow-hidden">
+    <div id="technologies" className="py-32 bg-gray-900 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -47,10 +47,10 @@ const Services = () => {
           viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Services
+            IT Solutions & Services
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-            We deliver cutting-edge solutions that drive your business forward
+            Microsoft-certified managed services that transform your business operations and drive innovation
           </p>
         </motion.div>
 

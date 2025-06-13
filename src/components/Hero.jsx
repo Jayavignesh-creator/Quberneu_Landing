@@ -2,8 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-  const handleGetStarted = () => {
-    alert('Welcome to Quberneu! 🚀')
+  const handleContactUs = () => {
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   const containerVariants = {
@@ -68,7 +71,7 @@ const Hero = () => {
             className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
             variants={itemVariants}
           >
-            Welcome to
+            Impact,
             <motion.span
               className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text"
               animate={{
@@ -80,7 +83,7 @@ const Hero = () => {
                 ease: "linear"
               }}
             >
-              {" "}Quberneu
+              {" "}delivered
             </motion.span>
           </motion.h1>
           
@@ -88,8 +91,9 @@ const Hero = () => {
             className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            A modern landing page built with React, Vite and Tailwind CSS. 
-            Fast, responsive, and ready for your next project.
+            In an industry that often falls short of its promises, Codec delivers. 
+            Codec's unique project delivery framework helps organisations create dramatic 
+            shifts in efficiencies and customer experiences with new technology.
           </motion.p>
           
           <motion.div
@@ -97,13 +101,13 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.button
-              onClick={handleGetStarted}
+              onClick={handleContactUs}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-2xl relative overflow-hidden group"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <span className="relative z-10">Get Started</span>
+              <span className="relative z-10">Contact Us</span>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"
                 initial={{ x: "-100%" }}
@@ -117,8 +121,14 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              onClick={() => {
+                const solutionsSection = document.querySelector('#solutions')
+                if (solutionsSection) {
+                  solutionsSection.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
             >
-              Learn More
+              Our Solutions
             </motion.button>
           </motion.div>
         </motion.div>
