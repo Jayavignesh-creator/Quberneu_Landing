@@ -1,12 +1,13 @@
 # Quberneu Landing Page
 
-A modern landing page built with **Vite** and **Tailwind CSS**. This boilerplate provides a fast, responsive, and developer-friendly foundation for your next project.
+A modern landing page built with **React**, **Vite** and **Tailwind CSS**. This boilerplate provides a fast, responsive, and developer-friendly foundation for your next project with a proper React component structure.
 
 ## 🚀 Features
 
+- ⚛️ **React Framework** - Built with React for component-based development
 - ⚡ **Lightning Fast** - Built with Vite for instant hot reload and optimized builds
 - 🎨 **Beautiful Design** - Styled with Tailwind CSS for modern, responsive design
-- 💻 **Developer Friendly** - Clean code structure with modern JavaScript
+- 💻 **Developer Friendly** - Clean React component structure with modern JavaScript
 - 📱 **Responsive** - Mobile-first design that works on all devices
 - 🔧 **Ready to Deploy** - Optimized build output ready for production
 
@@ -47,16 +48,31 @@ A modern landing page built with **Vite** and **Tailwind CSS**. This boilerplate
 
 ```
 ├── src/
-│   ├── main.js          # JavaScript entry point
-│   └── style.css        # Tailwind CSS imports
-├── index.html           # Main HTML file
-├── package.json         # Dependencies and scripts
-├── tailwind.config.js   # Tailwind configuration
-├── postcss.config.js    # PostCSS configuration
-└── vite.config.js       # Vite configuration
+│   ├── components/        # React components
+│   │   ├── Navigation.jsx # Navigation component
+│   │   ├── Hero.jsx       # Hero section component
+│   │   ├── Features.jsx   # Features section component
+│   │   └── Footer.jsx     # Footer component
+│   ├── App.jsx           # Main App component
+│   ├── main.jsx          # React entry point
+│   └── style.css         # Tailwind CSS imports
+├── index.html            # Main HTML file
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind configuration
+├── postcss.config.js     # PostCSS configuration
+└── vite.config.js        # Vite configuration with React plugin
 ```
 
 ## 🎨 Customization
+
+### Components
+
+Each section of the landing page is organized into reusable React components:
+
+- **Navigation.jsx** - Top navigation bar with brand and menu items
+- **Hero.jsx** - Main hero section with call-to-action buttons
+- **Features.jsx** - Features showcase with icons and descriptions
+- **Footer.jsx** - Footer with links and branding
 
 ### Tailwind CSS
 
@@ -64,11 +80,11 @@ The project uses Tailwind CSS for styling. You can customize the design by:
 
 1. Editing `tailwind.config.js` to add custom colors, fonts, and other design tokens
 2. Adding custom components in `src/style.css`
-3. Modifying the HTML structure in `index.html`
+3. Modifying component styles directly in the JSX files
 
-### JavaScript
+### Adding New Components
 
-Add your custom JavaScript functionality in `src/main.js` or create additional modules as needed.
+Create new components in the `src/components/` directory and import them into `App.jsx` or other components as needed.
 
 ## 🚢 Deployment
 
