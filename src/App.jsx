@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-gray-50 font-sans overflow-x-hidden">
+    <div className="bg-primary">
       <AnimatePresence>
         <LoadingScreen isLoading={isLoading} />
       </AnimatePresence>
