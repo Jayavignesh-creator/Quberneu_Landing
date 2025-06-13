@@ -44,7 +44,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Services
@@ -62,7 +62,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               whileHover={{ y: -10 }}
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full hover:bg-white/20 transition-all duration-300 border border-white/10">
@@ -70,24 +70,39 @@ const Services = () => {
                   className="text-4xl mb-6"
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  initial={{ rotate: -10, scale: 0.8, opacity: 0 }}
+                  whileInView={{ rotate: 0, scale: 1, opacity: 1 }}
+                  viewport={{ once: false }}
                 >
                   {service.icon}
                 </motion.div>
                 
-                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                <motion.h3 
+                  className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                  viewport={{ once: false }}
+                >
                   {service.title}
-                </h3>
+                </motion.h3>
                 
-                <p className="text-gray-300 leading-relaxed">
+                <motion.p 
+                  className="text-gray-300 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                  viewport={{ once: false }}
+                >
                   {service.description}
-                </p>
+                </motion.p>
                 
                 <motion.div
                   className={`mt-6 h-1 bg-gradient-to-r ${service.color} rounded-full`}
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                 />
               </div>
             </motion.div>

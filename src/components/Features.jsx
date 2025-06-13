@@ -69,7 +69,7 @@ const Features = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Powerful Features
@@ -84,7 +84,7 @@ const Features = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
         >
           {features.map((feature, index) => (
             <motion.div
@@ -101,17 +101,32 @@ const Features = () => {
                 className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                initial={{ scale: 0, rotate: -45 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: false }}
               >
                 {feature.icon}
               </motion.div>
               
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+              <motion.h3 
+                className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                viewport={{ once: false }}
+              >
                 {feature.title}
-              </h3>
+              </motion.h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <motion.p 
+                className="text-gray-600 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                viewport={{ once: false }}
+              >
                 {feature.description}
-              </p>
+              </motion.p>
             </motion.div>
           ))}
         </motion.div>

@@ -36,7 +36,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: i * 0.1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             ⭐
           </motion.span>
@@ -59,7 +59,7 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             What Our Clients Say
@@ -77,7 +77,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 50, rotateY: -10 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               whileHover={{ 
                 y: -5,
                 transition: { duration: 0.2 }
@@ -92,7 +92,7 @@ const Testimonials = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 "{testimonial.content}"
               </motion.p>
@@ -102,7 +102,7 @@ const Testimonials = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.5 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <motion.img
                   src={testimonial.avatar}
