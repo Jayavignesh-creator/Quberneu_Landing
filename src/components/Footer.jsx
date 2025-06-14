@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
   const contactInfo = [
-    { label: 'Email', value: 'info@codec.ie', href: 'mailto:info@codec.ie' },
+    { label: 'Email', value: 'info@quberneu.com', href: 'mailto:info@quberneu.com' },
     { label: 'Phone', value: '+353-1-603-4300', href: 'tel:+353-1-603-4300' },
     { label: 'Address', value: 'Dublin, Ireland', href: '#' }
   ]
@@ -19,7 +19,7 @@ const Footer = () => {
           viewport={{ once: false }}
         >
           <h2 className="section-title">
-            Contact Codec
+            Contact Quberneu
           </h2>
           <p className="section-subtitle text-secondary">
             Ready to transform your business with Microsoft-certified IT solutions? Get in touch with our team.
@@ -82,7 +82,7 @@ const Footer = () => {
             viewport={{ once: false }}
           >
             <motion.a
-              href="mailto:info@codec.ie"
+              href="mailto:info@quberneu.com"
               className="btn btn-primary"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -106,7 +106,7 @@ const Footer = () => {
           viewport={{ once: false }}
         >
           <div style={{ marginBottom: '1rem' }}>
-            {/* Codec Logo */}
+            {/* Quberneu Logo */}
             <svg 
               style={{ height: '32px', margin: '0 auto', display: 'block' }}
               viewBox="0 0 134.57 35.505" 
@@ -126,7 +126,7 @@ const Footer = () => {
             fontSize: '14px',
             fontFamily: 'FedraSansStd, sans-serif'
           }}>
-            © 2024 Codec. All rights reserved. Microsoft-certified IT managed services provider.
+            © 2024 Quberneu. All rights reserved. Microsoft-certified IT managed services provider.
           </p>
         </motion.div>
       </div>

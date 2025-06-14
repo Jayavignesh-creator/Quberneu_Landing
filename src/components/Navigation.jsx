@@ -47,7 +47,7 @@ const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
-          {/* Codec Logo SVG - simplified version */}
+          {/* Quberneu Logo SVG - simplified version */}
           <svg 
             className="logo logo-svg" 
             viewBox="0 0 134.57 35.505" 

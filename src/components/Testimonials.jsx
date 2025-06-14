@@ -37,10 +37,10 @@ const Testimonials = () => {
           viewport={{ once: false }}
         >
           <h2 className="section-title">
-            About Codec
+            About Quberneu
           </h2>
           <p className="section-subtitle text-secondary">
-            As a Microsoft-certified IT managed services provider, Codec offers best-in-class people and processes 
+            As a Microsoft-certified IT managed services provider, Quberneu offers best-in-class people and processes 
             to lead successful digital transformation projects. We combine proven technologies with a personalised 
             approach to fully support your organisation's success.
           </p>
