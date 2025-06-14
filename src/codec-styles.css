@@ -72,6 +72,10 @@ p {
   background-color: #e3e0da;
 }
 
+.bg-light {
+  background-color: #ffffff;
+}
+
 .bg-accent {
   background-color: #1922fb;
 }
@@ -340,6 +344,14 @@ p {
   color: #948f8a;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.section-description {
+  font-family: 'FedraSansStd', sans-serif;
+  font-size: 18px;
+  color: #2b2b2e;
+  line-height: 1.666;
+  margin: 15px 0;
 }
 
 /* Background Patterns */

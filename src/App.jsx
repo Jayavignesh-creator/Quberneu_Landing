@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import Technologies from './components/Technologies'
 import PartnerMarquee from './components/PartnerMarquee'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
@@ -40,6 +41,7 @@ function App() {
           <Navigation />
           <Hero />
           <Features />
+          <Technologies />
           <PartnerMarquee />
           <Services />
           <Portfolio />

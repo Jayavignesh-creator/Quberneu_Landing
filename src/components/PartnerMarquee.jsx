@@ -50,7 +50,7 @@ const PartnerMarquee = () => {
               ))}
             </div>
 
-            {/* Duplicate set for seamless loop
+            {/* Duplicate set for seamless loop */}
             <div className="marquee-content">
               {partners.map((partner, index) => (
                 <motion.div
@@ -65,7 +65,7 @@ const PartnerMarquee = () => {
                   <span className="partner-name">{partner.name}</span>
                 </motion.div>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
