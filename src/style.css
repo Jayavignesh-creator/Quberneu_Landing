@@ -4,9 +4,9 @@
 
 @import "tailwindcss";
 
-/* Font imports for Codec design system */
+/* Font imports for Quberneu design system */
 
-/* Fallback fonts if Codec fonts are not available */
+/* Fallback fonts if Quberneu fonts are not available */
 body {
   font-family: "Inter", "FedraSansStd", sans-serif;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import QuberneuLogo from './QuberneuLogo'
 
 const Hero = () => {
   const handleContactUs = () => {
@@ -38,62 +39,76 @@ const Hero = () => {
       <div className="bg-pattern"></div>
       
       <div className="hero-content">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div className="ms-partner-badge" variants={itemVariants}>
-            Microsoft Certified Partner
-          </motion.div>
-          
-          <motion.h1
-            className="hero-title"
-            variants={itemVariants}
-          >
-            Impact,
-            <span className="accent"> delivered</span>
-          </motion.h1>
-          
-          <motion.p
-            className="hero-subtitle"
-            variants={itemVariants}
-          >
-            In an industry that often falls short of its promises, Codec delivers. 
-            Codec's unique project delivery framework helps organisations create dramatic 
-            shifts in efficiencies and customer experiences with new technology.
-          </motion.p>
-          
+        <div className="hero-layout">
+          {/* Left Content */}
           <motion.div
-            className="btn-group"
-            variants={itemVariants}
+            className="hero-left"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <motion.button
-              onClick={handleContactUs}
-              className="btn btn-primary"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              Contact Us
-            </motion.button>
+            <motion.div className="ms-partner-badge" variants={itemVariants}>
+              Microsoft Certified Partner
+            </motion.div>
             
-            <motion.button
-              className="btn btn-secondary"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              onClick={() => {
-                const solutionsSection = document.querySelector('#solutions')
-                if (solutionsSection) {
-                  solutionsSection.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
+            <motion.h1
+              className="hero-title"
+              variants={itemVariants}
             >
-              Our Solutions
-            </motion.button>
+              Impact,
+              <span className="accent"> delivered</span>
+            </motion.h1>
+            
+            <motion.p
+              className="hero-subtitle"
+              variants={itemVariants}
+            >
+              In an industry that often falls short of its promises, Quberneu delivers. 
+              Quberneu's unique project delivery framework helps organisations create dramatic 
+              shifts in efficiencies and customer experiences with new technology.
+            </motion.p>
+            
+            <motion.div
+              className="btn-group"
+              variants={itemVariants}
+            >
+              <motion.button
+                onClick={handleContactUs}
+                className="btn btn-primary"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                Contact Us
+              </motion.button>
+              
+              <motion.button
+                className="btn btn-secondary"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                onClick={() => {
+                  const solutionsSection = document.querySelector('#solutions')
+                  if (solutionsSection) {
+                    solutionsSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
+                Our Solutions
+              </motion.button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Logo */}
+          <motion.div
+            className="hero-right"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <QuberneuLogo />
+          </motion.div>
+        </div>
       </div>
       
       {/* Scroll indicator */}
