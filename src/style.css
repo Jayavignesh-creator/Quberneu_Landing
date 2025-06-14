@@ -1,7 +1,10 @@
-@import "./codec-styles.css";
-
 /* Font imports for Codec design system */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "./codec-styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Fallback fonts if Codec fonts are not available */
 body {

@@ -37,23 +37,26 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className="main-header"
+      className="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out"
+      style={{ 
+        background: 'rgba(238, 237, 233, 0.95)',
+        backdropFilter: 'blur(20px)'
+      }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="header-nav">
+      <div className="flex items-center justify-between py-6 max-w-container mx-auto w-[91%]">
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           {/* Codec Logo SVG - simplified version */}
           <svg 
-            className="logo logo-svg" 
+            className="h-9 w-auto cursor-pointer" 
             viewBox="0 0 134.57 35.505" 
             xmlns="http://www.w3.org/2000/svg"
             onClick={(e) => handleNavClick(e, '#home')}
-            style={{ cursor: 'pointer' }}
           >
             <g fill="#2b2b2e">
               <path d="M86.82,11.67c-3.31.11-5.91,2.87-5.84,6.18s2.80,5.94,6.11,5.91s5.98-2.73,5.98-6.04c-.06-3.39-2.86-6.09-6.25-6.05m6.25,12.58c-1.72,1.53-3.94,2.37-6.25,2.37-4.88-.16-8.72-4.23-8.61-9.11s4.13-8.77,9.01-8.71s8.81,4.03,8.81,8.91c0,.14,0,.28-.01,.42h.01v13.68h-2.97Z" transform="translate(-77.36,-8.89)"/>
@@ -65,12 +68,13 @@ const Navigation = () => {
           </svg>
         </motion.div>
         
-        <div className="nav-menu">
+        <div className="flex list-none m-0 p-0 gap-8">
           {navItems.map((item, index) => (
             <motion.a
               key={item.name}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
+              className="font-tomato text-base text-dark no-underline transition-colors duration-300 ease-in-out relative hover:text-primary"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}

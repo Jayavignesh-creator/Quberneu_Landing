@@ -33,11 +33,12 @@ const Hero = () => {
   };
 
   return (
-    <div id="home" className="hero-section">
+    <div id="home" className="min-h-screen flex items-center relative overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, #eeede9 0%, #e3e0da 100%)' }}>
       {/* Background pattern overlay */}
       <div className="bg-pattern"></div>
 
-      <div className="hero-content">
+      <div className="max-w-container mx-auto px-[4.5%] text-center z-10 relative">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -47,20 +48,24 @@ const Hero = () => {
             Microsoft Certified Partner
           </motion.div>
 
-          <motion.h1 className="hero-title" variants={itemVariants}>
+          <motion.h1 className="font-tomato font-medium leading-tight text-dark mb-8" 
+            style={{ fontSize: 'clamp(32px, 6vw, 80px)' }}
+            variants={itemVariants}>
             Impact,
-            <span className="accent"> delivered</span>
+            <span className="text-primary"> delivered</span>
           </motion.h1>
 
-          <motion.p className="hero-subtitle" variants={itemVariants}>
+          <motion.p className="font-fedra leading-relaxed text-secondary mb-12 max-w-[800px] mx-auto"
+            style={{ fontSize: 'clamp(18px, 1.5vw, 24px)' }}
+            variants={itemVariants}>
             Actionable Insights. Accurate Decisions. Data-centric approach for
             human-centric decisions.
           </motion.p>
 
-          <motion.div className="btn-group" variants={itemVariants}>
+          <motion.div className="flex gap-4 justify-center flex-wrap" variants={itemVariants}>
             <motion.button
               onClick={handleContactUs}
-              className="btn btn-primary"
+              className="inline-flex items-center px-8 py-4 font-tomato text-base font-medium no-underline border-0 rounded-none cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-primary text-white hover:bg-primary-600"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -69,7 +74,7 @@ const Hero = () => {
             </motion.button>
 
             <motion.button
-              className="btn btn-secondary"
+              className="inline-flex items-center px-8 py-4 font-tomato text-base font-medium no-underline border-2 border-primary rounded-none cursor-pointer transition-all duration-300 ease-in-out relative overflow-hidden bg-transparent text-primary hover:bg-primary hover:text-white"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
