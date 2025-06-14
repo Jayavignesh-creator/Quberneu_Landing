@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-primary">
+    <div className="bg-accent">
       <AnimatePresence>
         <LoadingScreen isLoading={isLoading} />
       </AnimatePresence>
