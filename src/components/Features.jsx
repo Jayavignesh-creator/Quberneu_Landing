@@ -5,15 +5,21 @@ const Features = () => {
   const features = [
     {
       title: "We do the right things",
-      description: "Our experts are invested in your organisation's success. We combine proven technologies and processes with a personalised approach to fully support your digital transformation projects."
+      description: "Our experts are invested in your organisation's success. We combine proven technologies and processes with a personalised approach to fully support your digital transformation projects.",
+      icon: "⚡",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
       title: "We sort the delivery",
-      description: "We customise our approach to your specific needs, with a focus on getting the fundamentals right. Through constant innovation of delivery methods, we're always improving our standard of service."
+      description: "We customise our approach to your specific needs, with a focus on getting the fundamentals right. Through constant innovation of delivery methods, we're always improving our standard of service.",
+      icon: "🚀",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
       title: "Microsoft-Certified Delivery",
-      description: "We're one of the most awarded and certified specialist Microsoft Partners in Europe, delivering best-in-class people and processes for successful digital transformation projects."
+      description: "We're one of the most awarded and certified specialist Microsoft Partners in Europe, delivering best-in-class people and processes for successful digital transformation projects.",
+      icon: "🏆",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     }
   ]
 
@@ -28,16 +34,35 @@ const Features = () => {
 
   const itemVariants = {
     hidden: { 
-      y: 50, 
+      x: -100, 
       opacity: 0,
-      scale: 0.9 
+      rotateY: -45
     },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
-      scale: 1,
+      rotateY: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
+
+  const cardHoverVariants = {
+    rest: { 
+      scale: 1,
+      y: 0,
+      boxShadow: "0 4px 20px rgba(0,0,0,0.1)"
+    },
+    hover: { 
+      scale: 1.05,
+      y: -10,
+      boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+      transition: {
+        duration: 0.3,
         ease: "easeOut"
       }
     }
@@ -71,20 +96,73 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="cards-item"
+              className="feature-card-enhanced"
               variants={itemVariants}
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              style={{
+                background: feature.gradient,
+                borderRadius: '16px',
+                padding: '2rem',
+                margin: '1rem',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
             >
-              <div className="cards-item-link">
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  <div>
-                    <h3 className="cards-item-title">
-                      {feature.title}
-                    </h3>
-                    <p className="cards-item-desc">
-                      {feature.description}
-                    </p>
-                  </div>
-                </a>
+              {/* Background pattern */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)',
+                opacity: 0.3
+              }} />
+              
+              {/* Icon */}
+              <motion.div
+                style={{
+                  fontSize: '3rem',
+                  marginBottom: '1rem',
+                  textAlign: 'center',
+                  position: 'relative',
+                  zIndex: 2
+                }}
+                whileHover={{ 
+                  scale: 1.2,
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 }
+                }}
+              >
+                {feature.icon}
+              </motion.div>
+              
+              <div style={{ position: 'relative', zIndex: 2 }}>
+                <motion.h3 
+                  className="cards-item-title"
+                  style={{ 
+                    color: '#ffffff',
+                    marginBottom: '1rem',
+                    textAlign: 'center'
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {feature.title}
+                </motion.h3>
+                <motion.p 
+                  className="cards-item-desc"
+                  style={{ 
+                    color: 'rgba(255,255,255,0.9)',
+                    textAlign: 'center',
+                    lineHeight: '1.6'
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  whileHover={{ opacity: 1 }}
+                >
+                  {feature.description}
+                </motion.p>
               </div>
             </motion.div>
           ))}

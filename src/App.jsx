@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import PartnerMarquee from './components/PartnerMarquee'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
 import Testimonials from './components/Testimonials'
@@ -39,6 +40,7 @@ function App() {
           <Navigation />
           <Hero />
           <Features />
+          <PartnerMarquee />
           <Services />
           <Portfolio />
           <Testimonials />
