@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1335" height="762" viewBox="0 0 1335 762">
-  <defs>
-    <radialGradient id="radial-gradient" cx="0.836" cy="0.182" r="0.494" gradientTransform="matrix(1, -0.008, 0.011, 1.403, -0.003, -0.11)" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#d1ccc1" stop-opacity="0.529"/>
-      <stop offset="1" stop-color="#d1ccc1"/>
-    </radialGradient>
-  </defs>
-  <rect id="_51_4__codec" data-name="51 (4)_codec" width="1335" height="762" fill="url(#radial-gradient)"/>
-</svg>
