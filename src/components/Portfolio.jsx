@@ -1,25 +1,24 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const industries = [
     {
       title: "Public Sector & Government",
-      description: "Digital transformation solutions for government agencies and public institutions"
+      description:
+        "Digital transformation solutions for government agencies and public institutions",
     },
     {
-      title: "Health & Life Sciences", 
-      description: "Secure, compliant IT solutions for healthcare providers and life sciences organizations"
+      title: "Health & Life Sciences",
+      description:
+        "Secure, compliant IT solutions for healthcare providers and life sciences organizations",
     },
     {
       title: "Financial Services",
-      description: "Secure financial technology solutions with regulatory compliance and risk management"
+      description:
+        "Secure financial technology solutions with regulatory compliance and risk management",
     },
-    {
-      title: "Higher Education",
-      description: "Modern education technology platforms for enhanced learning and administration"
-    }
-  ]
+  ];
 
   return (
     <div id="industries" className="section bg-primary">
@@ -31,11 +30,10 @@ const Portfolio = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="section-title">
-            Industries We Serve
-          </h2>
+          <h2 className="section-title">Industries We Serve</h2>
           <p className="section-subtitle text-secondary">
-            Specialized IT solutions tailored to industry-specific challenges and requirements
+            Specialized IT solutions tailored to industry-specific challenges
+            and requirements
           </p>
         </motion.div>
 
@@ -52,12 +50,8 @@ const Portfolio = () => {
               <div className="cards-item-link">
                 <a href="#" onClick={(e) => e.preventDefault()}>
                   <div>
-                    <h3 className="cards-item-title">
-                      {industry.title}
-                    </h3>
-                    <p className="cards-item-desc">
-                      {industry.description}
-                    </p>
+                    <h3 className="cards-item-title">{industry.title}</h3>
+                    <p className="cards-item-desc">{industry.description}</p>
                   </div>
                 </a>
               </div>
@@ -66,7 +60,7 @@ const Portfolio = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

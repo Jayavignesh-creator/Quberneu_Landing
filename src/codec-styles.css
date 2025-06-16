@@ -1,6 +1,8 @@
 /* Quberneu Website Styling - Extracted from Original Design */
 /* Reset and Base Styles */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -11,15 +13,20 @@ html {
 
 body {
   margin: 0;
-  font-family: 'FedraSansStd', sans-serif;
+  font-family: "FedraSansStd", sans-serif;
   color: #2b2b2e;
   background-color: #eeede9;
   overflow-x: hidden;
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "TomatoGrotesk-Medium", sans-serif;
   font-weight: 500;
   color: #2b2b2e;
   line-height: 1.2;
@@ -44,7 +51,7 @@ h3 {
 }
 
 p {
-  font-family: 'FedraSansStd', sans-serif;
+  font-family: "FedraSansStd", sans-serif;
   font-size: 18px;
   line-height: 1.666;
   color: #2b2b2e;
@@ -53,7 +60,7 @@ p {
 
 /* Color Scheme */
 .text-primary {
-  color: #1922fb;
+  color: #f0242c;
 }
 
 .text-secondary {
@@ -65,15 +72,15 @@ p {
 }
 
 .bg-primary {
-  background-color: #eeede9;
+  background-color: #fbfcf8;
 }
 
 .bg-secondary {
-  background-color: #e3e0da;
+  background-color: #fbfcf8;
 }
 
 .bg-accent {
-  background-color: #1922fb;
+  background-color: #f0242c;
 }
 
 /* Layout Components */
@@ -89,7 +96,7 @@ p {
 
 /* Header Styles */
 .main-header {
-  background: rgba(238, 237, 233, 0.95);
+  background: #fbfcfa;
   backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
@@ -123,7 +130,7 @@ p {
 }
 
 .nav-menu a {
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
+  font-family: "TomatoGrotesk-Medium", sans-serif;
   font-size: 16px;
   color: #2b2b2e;
   text-decoration: none;
@@ -132,12 +139,12 @@ p {
 }
 
 .nav-menu a:hover {
-  color: #1922fb;
+  color: #f0242c;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #eeede9 0%, #e3e0da 100%);
+  background: #fbfcfa;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -176,8 +183,8 @@ p {
 }
 
 .hero-title {
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
-  font-size: clamp(32px, 6vw, 80px);
+  font-family: "TomatoGrotesk-Medium", sans-serif;
+  font-size: clamp(60px, 2vw, 80px);
   font-weight: 500;
   line-height: 1.1;
   color: #2b2b2e;
@@ -185,14 +192,14 @@ p {
 }
 
 .hero-title .accent {
-  color: #1922fb;
+  color: #f0242c;
 }
 
 .hero-subtitle {
-  font-family: 'FedraSansStd', sans-serif;
+  font-family: "FedraSansStd", sans-serif;
   font-size: clamp(18px, 1.5vw, 24px);
   line-height: 1.6;
-  color: #948f8a;
+  color: black;
   margin-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
@@ -204,7 +211,7 @@ p {
   display: inline-flex;
   align-items: center;
   padding: 16px 32px;
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
+  font-family: "TomatoGrotesk-Medium", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
@@ -217,7 +224,7 @@ p {
 }
 
 .btn-primary {
-  background-color: #1922fb;
+  background-color: #f0242c;
   color: white;
 }
 
@@ -228,12 +235,12 @@ p {
 
 .btn-secondary {
   background-color: transparent;
-  color: #1922fb;
-  border: 2px solid #1922fb;
+  color: #f0242c;
+  border: 2px solid #f0242c;
 }
 
 .btn-secondary:hover {
-  background-color: #1922fb;
+  background-color: #f0242c;
   color: white;
 }
 
@@ -253,7 +260,7 @@ p {
 }
 
 .cards-item {
-  background-color: #eeede9;
+  background-color: #fbfcfa;
   position: relative;
   min-height: 338px;
   max-width: 301px;
@@ -288,7 +295,7 @@ p {
 }
 
 .cards-item-title {
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
+  font-family: "TomatoGrotesk-Medium", sans-serif;
   font-size: clamp(22px, 2.269vw, 31px);
   color: #2b2b2e;
   transition: all 0.3s ease;
@@ -296,9 +303,9 @@ p {
 }
 
 .cards-item-desc {
-  font-family: 'FedraSansStd', sans-serif;
+  font-family: "FedraSansStd", sans-serif;
   font-size: 18px;
-  color: #948f8a;
+  color: black;
   line-height: 1.6;
 }
 
@@ -310,7 +317,7 @@ p {
   bottom: 1.8rem;
   width: 20px;
   height: 3px;
-  background-color: #1922fb;
+  background-color: #f0242c;
   transition: all 0.3s ease;
 }
 
@@ -349,14 +356,14 @@ p {
 }
 
 .section-title {
-  font-family: 'TomatoGrotesk-Medium', sans-serif;
+  font-family: "TomatoGrotesk-Medium", sans-serif;
   font-size: clamp(32px, 3.333vw, 48px);
-  color: #2b2b2e;
+  color: #f0242c;
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
-  font-family: 'FedraSansStd', sans-serif;
+  font-family: "FedraSansStd", sans-serif;
   font-size: 18px;
   color: #948f8a;
   max-width: 600px;
@@ -382,65 +389,65 @@ p {
   .header-nav {
     padding: 18px 0;
   }
-  
+
   .hero-content {
     padding: 0 7%;
   }
-  
+
   .hero-layout {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
   }
-  
+
   .hero-left {
     text-align: center;
   }
-  
+
   .btn-group {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .cards-item {
     max-width: 100%;
     min-height: 225px;
     width: 48%;
     margin-right: 4%;
   }
-  
-  .cards-item:nth-child(2n+2) {
+
+  .cards-item:nth-child(2n + 2) {
     margin-right: 0;
   }
-  
+
   .cards-wrap {
     column-gap: 0;
   }
-  
+
   .cards-item-title {
     font-size: 18px;
   }
-  
+
   .cards-item-desc {
     font-size: 14px;
   }
-  
+
   .cards-item-link a {
     padding: 40px 0.9rem 4.6rem;
   }
-  
+
   .nav-menu {
     display: none; /* Will be replaced with mobile menu */
   }
-  
+
   .section-title {
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 15px;
   }
-  
+
   .hero-title {
-    font-size: 32px;
+    font-size: 20px;
     line-height: 40px;
   }
 }
@@ -449,21 +456,21 @@ p {
   .main-container {
     padding: 0 7%;
   }
-  
+
   .hero-content {
     padding: 0 5%;
   }
-  
+
   .hero-layout {
     gap: 1.5rem;
   }
-  
+
   .cards-item {
     width: 100%;
     margin: 0 auto 2rem;
   }
-  
-  .cards-item:nth-child(2n+2) {
+
+  .cards-item:nth-child(2n + 2) {
     margin-right: auto;
     margin-bottom: 2rem;
   }
@@ -493,7 +500,8 @@ p {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -505,7 +513,7 @@ p {
 .ms-partner-badge {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(135deg, #1922fb 0%, #0f1ae6 100%);
+  background: linear-gradient(135deg, #f0242c 0%, #0f1ae6 100%);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -529,7 +537,11 @@ p {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
   40% {
@@ -596,6 +608,6 @@ html {
 /* Focus states for accessibility */
 .btn:focus,
 .nav-menu a:focus {
-  outline: 2px solid #1922fb;
+  outline: 2px solid #f0242c;
   outline-offset: 2px;
 }

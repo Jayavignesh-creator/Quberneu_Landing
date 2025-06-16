@@ -99,7 +99,7 @@ const Features = () => {
         <>
           We do
           <br />
-          <span className="text-blue-600 font-semibold">
+          <span className="text-[#f0242c] font-semibold">
             Strategy and Advisory
           </span>
         </>
@@ -112,7 +112,7 @@ const Features = () => {
       heading: (
         <>
           We Leverage <br />
-          <span className="text-blue-600 font-semibold">AI and ML</span>
+          <span className="text-[#f0242c] font-semibold">AI and ML</span>
         </>
       ),
       description:
@@ -123,7 +123,7 @@ const Features = () => {
       heading: (
         <>
           We work with <br />
-          <span className="text-blue-600 font-semibold">Data Engineering</span>
+          <span className="text-[#f0242c] font-semibold">Data Engineering</span>
         </>
       ),
       description:
@@ -134,7 +134,7 @@ const Features = () => {
       heading: (
         <>
           We provide <br />
-          <span className="text-blue-600 font-semibold">
+          <span className="text-[#f0242c] font-semibold">
             Operationable Insights
           </span>
         </>
@@ -149,13 +149,13 @@ const Features = () => {
     <section
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="bg-white"
+      // className="bg-white"
       style={{
         backgroundImage: `
-          radial-gradient(circle, #e5e7eb 2px, transparent 3px),
+          radial-gradient(circle, #D3D3D3 1px, transparent 2px),
           radial-gradient(
             500px circle at var(--x, 50%) var(--y, 50%),
-            #eeede9,
+            #fef9f3,
             transparent 80%
           )
         `,
