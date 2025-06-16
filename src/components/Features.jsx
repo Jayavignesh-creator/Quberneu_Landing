@@ -99,7 +99,7 @@ const Features = () => {
         <>
           We do
           <br />
-          <span className="text-[#f0242c] font-semibold">
+          <span className="text-primary font-semibold">
             Strategy and Advisory
           </span>
         </>
@@ -112,7 +112,7 @@ const Features = () => {
       heading: (
         <>
           We Leverage <br />
-          <span className="text-[#f0242c] font-semibold">AI and ML</span>
+          <span className="text-primary font-semibold">AI and ML</span>
         </>
       ),
       description:
@@ -123,7 +123,7 @@ const Features = () => {
       heading: (
         <>
           We work with <br />
-          <span className="text-[#f0242c] font-semibold">Data Engineering</span>
+          <span className="text-primary font-semibold">Data Engineering</span>
         </>
       ),
       description:
@@ -134,7 +134,7 @@ const Features = () => {
       heading: (
         <>
           We provide <br />
-          <span className="text-[#f0242c] font-semibold">
+          <span className="text-primary font-semibold">
             Operationable Insights
           </span>
         </>

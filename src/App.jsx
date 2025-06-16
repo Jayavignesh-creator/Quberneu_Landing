@@ -8,7 +8,6 @@ import Portfolio from './components/Portfolio'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
-import './style.css'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -29,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-primary">
+    <div className="bg-neutral-light font-fedra text-neutral-dark overflow-x-hidden">
       <AnimatePresence>
         <LoadingScreen isLoading={isLoading} />
       </AnimatePresence>

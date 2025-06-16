@@ -21,18 +21,18 @@ const Testimonials = () => {
   ];
 
   return (
-    <div id="about" className="section bg-secondary">
-      <div className="main-container">
+    <div id="about" className="py-[calc(60px+5vh)] bg-secondary">
+      <div className="max-w-container mx-auto px-[4.5%]">
         {/* About Content */}
         <motion.div
-          className="section-header"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="section-title">About Quberneu</h2>
-          <p className="section-subtitle text-secondary">
+          <h2 className="font-tomato text-section-title text-primary mb-4">About Quberneu</h2>
+          <p className="font-fedra text-lg text-neutral-medium max-w-[600px] mx-auto">
             As a Microsoft-certified IT managed services provider, Quberneu
             offers best-in-class people and processes to lead successful digital
             transformation projects. We combine proven technologies with a
@@ -41,33 +41,18 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="cards-wrap">
+        <div className="flex flex-wrap justify-center gap-5">
           {aboutStats.map((stat, index) => (
             <motion.div
               key={index}
-              className="cards-item"
+              className="bg-secondary relative min-h-[200px] max-w-[301px] w-full flex flex-col justify-center items-center transition-all duration-300 shadow-[0_3px_30px_rgba(43,43,46,0.1)] cursor-pointer hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(43,43,46,0.15)] text-center p-8"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: false }}
-              style={{
-                textAlign: "center",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                minHeight: "200px",
-                padding: "2rem",
-              }}
             >
               <motion.div
-                className="text-primary"
-                style={{
-                  fontSize: "clamp(32px, 4vw, 48px)",
-                  fontFamily: "TomatoGrotesk-Medium, sans-serif",
-                  fontWeight: "500",
-                  marginBottom: "1rem",
-                }}
+                className="text-primary font-tomato text-[clamp(32px,4vw,48px)] font-medium mb-4"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
@@ -77,12 +62,7 @@ const Testimonials = () => {
               </motion.div>
 
               <motion.h3
-                style={{
-                  fontSize: "20px",
-                  fontFamily: "TomatoGrotesk-Medium, sans-serif",
-                  color: "#2b2b2e",
-                  marginBottom: "0.5rem",
-                }}
+                className="text-xl font-tomato text-neutral-dark mb-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
@@ -92,8 +72,7 @@ const Testimonials = () => {
               </motion.h3>
 
               <motion.p
-                className="text-secondary"
-                style={{ fontSize: "16px", textAlign: "center" }}
+                className="text-neutral-medium text-base text-center"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}

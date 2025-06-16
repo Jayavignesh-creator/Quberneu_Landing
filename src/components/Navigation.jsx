@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import QuberneuLogo from "./QuberneuLogo";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,33 +38,25 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className="main-header"
+      className="bg-secondary backdrop-blur-20 fixed top-0 left-0 right-0 z-[1000] transition-all duration-300"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="header-nav">
+      <div className="flex items-center justify-between py-6 max-w-container mx-auto w-[91%]">
         <motion.div
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
           onClick={(e) => handleNavClick(e, "#home")}
-          style={{ cursor: "pointer" }}
+          className="cursor-pointer"
         >
-          {/* Quberneu Logo - Text Based */}
-          <div
-            style={{
-              fontFamily: "TomatoGrotesk-Medium, sans-serif",
-              fontSize: "20px",
-              fontWeight: "500",
-              color: "#f0242c",
-              letterSpacing: "1px",
-            }}
-          >
-            Quberneu
+          {/* Use QuberneuLogo component instead of text */}
+          <div className="scale-50 origin-left">
+            <QuberneuLogo />
           </div>
         </motion.div>
 
-        <div className="nav-menu">
+        <div className="flex list-none m-0 p-0 gap-8">
           {navItems.map((item, index) => (
             <motion.a
               key={item.name}
@@ -73,6 +66,7 @@ const Navigation = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
+              className="font-tomato text-base text-neutral-dark no-underline transition-colors duration-300 relative hover:text-primary"
             >
               {item.name}
             </motion.a>

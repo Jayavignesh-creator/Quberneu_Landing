@@ -13,74 +13,45 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="section bg-secondary">
-      <div className="main-container">
+    <footer id="contact" className="py-[calc(60px+5vh)] bg-secondary">
+      <div className="max-w-container mx-auto px-[4.5%]">
         <motion.div
-          className="section-header"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="section-title">Contact Quberneu</h2>
-          <p className="section-subtitle text-secondary">
+          <h2 className="font-tomato text-section-title text-primary mb-4">Contact Quberneu</h2>
+          <p className="font-fedra text-lg text-neutral-medium max-w-[600px] mx-auto">
             Ready to transform your business with Microsoft-certified IT
             solutions? Get in touch with our team.
           </p>
         </motion.div>
 
         <motion.div
-          style={{
-            textAlign: "center",
-            backgroundColor: "white",
-            padding: "3rem 2rem",
-            marginBottom: "3rem",
-            border: "1px solid #f0242c",
-            borderRadius: "10px",
-          }}
+          className="text-center bg-white p-12 mb-12 border border-primary rounded-[10px]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: false }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              gap: "2rem",
-              marginBottom: "2rem",
-            }}
-          >
+          <div className="flex flex-wrap justify-center gap-8 mb-8">
             {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.label}
-                style={{ textAlign: "center", minWidth: "200px" }}
+                className="text-center min-w-[200px]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: false }}
               >
-                <h4
-                  style={{
-                    fontFamily: "TomatoGrotesk-Medium, sans-serif",
-                    fontSize: "18px",
-                    color: "#f0242c",
-                    marginBottom: "0.5rem",
-                  }}
-                >
+                <h4 className="font-tomato text-lg text-primary mb-2">
                   {contact.label}
                 </h4>
                 <a
                   href={contact.href}
-                  style={{
-                    color: "#2b2b2e",
-                    textDecoration: "none",
-                    fontSize: "16px",
-                    fontFamily: "FedraSansStd, sans-serif",
-                  }}
-                  onMouseOver={(e) => (e.target.style.color = "#f0242c")}
-                  onMouseOut={(e) => (e.target.style.color = "#2b2b2e")}
+                  className="text-neutral-dark no-underline text-base font-fedra hover:text-primary transition-colors duration-300"
                 >
                   {contact.value}
                 </a>
@@ -89,8 +60,7 @@ const Footer = () => {
           </div>
 
           <motion.div
-            className="btn-group"
-            style={{ marginTop: "2rem" }}
+            className="flex gap-4 justify-center flex-wrap mt-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -98,7 +68,7 @@ const Footer = () => {
           >
             <motion.a
               href="mailto:info@quberneu.com"
-              className="btn btn-primary"
+              className="inline-flex items-center px-8 py-4 font-tomato text-base font-medium no-underline border-none rounded-none cursor-pointer transition-all duration-300 relative overflow-hidden bg-primary text-white hover:bg-blue-600 hover:-translate-y-0.5"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -110,39 +80,19 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <motion.div
-          style={{
-            textAlign: "center",
-            paddingTop: "2rem",
-            borderTop: "1px solid #948f8a",
-          }}
+          className="text-center pt-8 border-t border-neutral-medium"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: false }}
         >
-          <div style={{ marginBottom: "1rem" }}>
+          <div className="mb-4">
             {/* Quberneu Logo */}
-            <div
-              style={{
-                fontFamily: "TomatoGrotesk-Medium, sans-serif",
-                fontSize: "24px",
-                fontWeight: "500",
-                color: "#f0242c",
-                letterSpacing: "1px",
-                margin: "0 auto",
-                display: "block",
-              }}
-            >
+            <div className="font-tomato text-2xl font-medium text-primary tracking-wider mx-auto block">
               Quberneu
             </div>
           </div>
-          <p
-            style={{
-              color: "#948f8a",
-              fontSize: "14px",
-              fontFamily: "FedraSansStd, sans-serif",
-            }}
-          >
+          <p className="text-neutral-medium text-sm font-fedra">
             © 2024 Quberneu. All rights reserved. Microsoft-certified IT managed
             services provider.
           </p>

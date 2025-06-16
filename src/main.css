@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Base body styling with custom fonts */
+body {
+  font-family: "Inter", "FedraSansStd", sans-serif;
+  margin: 0;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "TomatoGrotesk-Medium", sans-serif;
+}
+
+/* Box sizing reset */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Screen reader only utility - keeping this as it's a common accessibility utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Background pattern for hero section */
+.bg-pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="2" fill="%23948f8a" opacity="0.1"/></svg>');
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -1;
+}
